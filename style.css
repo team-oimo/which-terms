@@ -10,11 +10,18 @@ div.wrapKOPIPE{
 	padding:20px;
 }
 /*-------------------------------*/
+div.wrapHINAGATA{
+	counter-reset: article;
+}
 div.wrapHINAGATA h1{
 	margin:0 0 30px 0;
 }
 div.wrapHINAGATA h2{
 	margin:30px 0 20px 0;
+}
+div.wrapHINAGATA h2::before{
+	counter-increment: article;
+	content: "第" counter(article) "条"
 }
 div.wrapHINAGATA p{
 	margin:20px 0;
